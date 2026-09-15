@@ -13,7 +13,7 @@ games = []
 with open("games.csv", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        # Si el valor está vacío, lo reemplazamos por 0
+    
         row["PTS_home"] = float(row["PTS_home"]) if row["PTS_home"] != "" else 0.0
         row["PTS_away"] = float(row["PTS_away"]) if row["PTS_away"] != "" else 0.0
         row["TOTAL_POINTS"] = row["PTS_home"] + row["PTS_away"]
